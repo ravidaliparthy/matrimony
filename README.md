@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Matrimony
 
 # 🕒 Employee Attendance System
@@ -138,3 +139,6 @@ No authentication is required.
 1. Navigate to the backend directory:
    ```bash
    cd backend
+=======
+# matrimony
+>>>>>>> f7ccbd9cf507c301483c572031005bbd82737e6e
