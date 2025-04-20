@@ -1,0 +1,57 @@
+<div class="container">
+  <mat-card>
+    <mat-card-title>Attendance Report</mat-card-title>
+    <mat-card-content >
+      <div class="filter-section">
+        <mat-form-field appearance="fill" class="filter-section-wrapper">
+          <mat-label>Date Range</mat-label>
+          <mat-date-range-input [rangePicker]="picker">
+            <input matStartDate placeholder="Start date">
+            <input matEndDate placeholder="End date">
+          </mat-date-range-input>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Employee Name</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Department</mat-label>
+          <mat-select>
+            <mat-option value="">All</mat-option>
+            <mat-option value="it">IT</mat-option>
+            <mat-option value="hr">HR</mat-option>
+            <mat-option value="sales">Sales</mat-option>
+            <mat-option value="marketing">Marketing</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <table mat-table [dataSource]="[]">
+        <ng-container matColumnDef="employeeName">
+          <th mat-header-cell *matHeaderCellDef> Employee Name </th>
+          <td mat-cell *matCellDef="let element">  </td>
+        </ng-container>
+        <ng-container matColumnDef="employeeId">
+          <th mat-header-cell *matHeaderCellDef> Employee ID </th>
+          <td mat-cell *matCellDef="let element">  </td>
+        </ng-container>
+        <ng-container matColumnDef="department">
+          <th mat-header-cell *matHeaderCellDef> Department </th>
+          <td mat-cell *matCellDef="let element">  </td>
+        </ng-container>
+        <ng-container matColumnDef="checkInTime">
+          <th mat-header-cell *matHeaderCellDef> Check-in Time </th>
+          <td mat-cell *matCellDef="let element">  </td>
+        </ng-container>
+        <ng-container matColumnDef="checkOutTime">
+          <th mat-header-cell *matHeaderCellDef> Check-out Time </th>
+          <td mat-cell *matCellDef="let element">  </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="['employeeName', 'employeeId', 'department', 'checkInTime', 'checkOutTime']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['employeeName', 'employeeId', 'department', 'checkInTime', 'checkOutTime'];"></tr>
+      </table>
+      <button mat-raised-button color="primary" (click)="downloadReport()">Download Report</button>
+    </mat-card-content>
+  </mat-card>
+</div>

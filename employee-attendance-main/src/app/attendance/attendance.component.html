@@ -1,0 +1,27 @@
+<div class="container">
+  <mat-card>
+    <mat-card-title>Employee Attendance</mat-card-title>
+    <mat-card-content>      
+      <form [formGroup]="attendanceForm">
+        <mat-form-field appearance="fill">
+          <mat-label>Employee Name</mat-label>
+          <input matInput formControlName="employee_name">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Employee ID</mat-label>
+          <input matInput formControlName="employee_id">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Department</mat-label>
+          <mat-select formControlName="department">
+            <mat-option *ngFor="let department of departments" [value]="department">{{department}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div>
+          <button mat-raised-button color="primary" (click)="checkIn()" [disabled]="isCheckInDisabled">Check-in</button>
+          <button mat-raised-button color="accent" (click)="checkOut()" [disabled]="isCheckOutDisabled">Check-out</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,78 @@
+/* General container centering */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+/* Card styling */
+mat-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+}
+
+/* Card title */
+mat-card-title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 5px;
+  color: #1f2937;
+}
+
+/* Subtitle below title */
+.subtitle {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #6b7280; /* subtle gray */
+}
+
+/* Form field full width */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Placeholder input background */
+input.mat-input-element,
+.mat-select-trigger {
+  background-color: #f8fafc;
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+/* Button styling */
+button[mat-raised-button] {
+  width: 100%;
+  font-weight: 600;
+  font-size: 15px;
+  color: white;
+  background-color: #2563eb; /* blue-600 */
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+/* Hover state */
+button[mat-raised-button]:hover {
+  background-color: #1e40af; /* blue-800 */
+}
+
+/* Link below button */
+.view-history-link {
+  display: block;
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #3b82f6; /* blue-500 */
+  text-decoration: none;
+}
+
+.view-history-link:hover {
+  text-decoration: underline;
+}

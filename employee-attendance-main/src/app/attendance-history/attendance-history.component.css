@@ -1,0 +1,87 @@
+/* Center the card on the page */
+mat-card {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+/* Title styling */
+mat-card-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2563eb;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* Paragraph styling */
+mat-card-content p {
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* Input field full width */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* Center the button */
+button[mat-raised-button] {
+  display: block;
+  margin: 0 auto 24px auto;
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+button[mat-raised-button]:hover {
+  background-color: #1e40af;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  margin-top: 16px;
+  border-collapse: collapse;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Table header */
+th.mat-header-cell {
+  background-color: #2563eb !important;
+  color: white !important;
+  font-weight: bold;
+  padding: 12px;
+  text-align: left;
+}
+
+/* Table cell */
+td.mat-cell {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  mat-card {
+    margin: 20px 10px;
+    padding: 24px;
+  }
+
+  th.mat-header-cell,
+  td.mat-cell {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

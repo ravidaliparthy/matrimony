@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+mat-card {
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+mat-card-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.filter-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.filter-section mat-form-field {
+  flex: 1 1 300px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+th.mat-header-cell {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  padding: 12px;
+  font-size: 14px;
+}
+
+td.mat-cell {
+  padding: 12px;
+  font-size: 14px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+}
+
+tr.mat-row:hover {
+  background-color: #f1f5ff;
+}
+
+button[mat-raised-button] {
+  background-color: #2563eb !important;
+  color: white;
+  font-weight: 500;
+  padding: 10px 24px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+button[mat-raised-button]:hover {
+  background-color: #1e4fcc !important;
+}
