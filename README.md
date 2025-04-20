@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Matrimony
 
 # 🕒 Employee Attendance System
