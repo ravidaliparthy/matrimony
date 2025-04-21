@@ -24,7 +24,15 @@ export class AttendanceService {
   }
 
   // Method to get the report based on filters
-  getReport(filters: any): Observable<any> {
-    return this.httpClient.post<any>(`${this.apiUrl}/reports`, filters);
+getReport(filters: any): Observable<any> {
+    const params = new URLSearchParams();
+  
+    for (const key in filters) {
+      if (filters[key]) {
+        params.set(key, filters[key]);
+      }
+    }
+  
+    return this.httpClient.get<any>(`${this.apiUrl}/reports?${params.toString()}`);
   }
 }
